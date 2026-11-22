@@ -32,7 +32,7 @@ func view(c *ui.Context) {
 	white := ui.RGBA(255, 255, 255, 1)
 	c.Root().Background(ui.RGBA(13, 13, 13, 0.75))
 	ui.Column(c).Fill().Center().Children(func() {
-		ui.Text(c, "\U0001f557").FontSize(128).Padding(16, 0, 0, 0)
+		ui.Text(c, "\U0001f557").FontSize(128)
 		ui.Row(c).Children(func() {
 			for _, city := range cities {
 				ui.Column(c).AlignItems(ui.Center).Padding(0, 28, 16, 16).Children(func() {
@@ -54,7 +54,7 @@ func main() {
 			DisableResize: true,
 			Hidden:        true,
 			Width:         1000,
-			Height:        280,
+			Height:        320,
 			Content:       ui.View(view),
 		})
 		w.ShowInactive() // don't take the keyboard
